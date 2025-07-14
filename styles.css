@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #111;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.scratch-container {
+  position: relative;
+  width: 320px;
+  height: 180px;
+  background: linear-gradient(to bottom right, #f9d976, #f39f86);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: grab;
+  border-radius: 12px;
+}
+
+.coupon-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #222;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
+  white-space: pre-wrap;
+}
+
+.copy-btn {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 8px 18px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 6px;
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.copy-btn.copied {
+  background: #28a745 !important;
+  color: #fff;
+}
